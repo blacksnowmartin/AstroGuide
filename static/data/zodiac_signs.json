@@ -1,0 +1,98 @@
+{
+    "Aries": {
+        "dates": "March 21 - April 19",
+        "element": "Fire",
+        "traits": ["Confident", "Courageous", "Enthusiastic"],
+        "lucky_numbers": [1, 8, 17],
+        "lucky_colors": ["Red", "Orange"],
+        "symbol": "Ram"
+    },
+    "Taurus": {
+        "dates": "April 20 - May 20",
+        "element": "Earth",
+        "traits": ["Reliable", "Patient", "Practical"],
+        "lucky_numbers": [2, 6, 9],
+        "lucky_colors": ["Green", "Pink"],
+        "symbol": "Bull"
+    },
+    "Gemini": {
+        "dates": "May 21 - June 20",
+        "element": "Air",
+        "traits": ["Adaptable", "Curious", "Affectionate"],
+        "lucky_numbers": [5, 7, 14],
+        "lucky_colors": ["Yellow", "Blue"],
+        "symbol": "Twins"
+    },
+    "Cancer": {
+        "dates": "June 21 - July 22",
+        "element": "Water",
+        "traits": ["Loyal", "Emotional", "Caring"],
+        "lucky_numbers": [2, 3, 15],
+        "lucky_colors": ["White", "Silver"],
+        "symbol": "Crab"
+    },
+    "Leo": {
+        "dates": "July 23 - August 22",
+        "element": "Fire",
+        "traits": ["Creative", "Passionate", "Generous"],
+        "lucky_numbers": [1, 4, 13],
+        "lucky_colors": ["Gold", "Orange"],
+        "symbol": "Lion"
+    },
+    "Virgo": {
+        "dates": "August 23 - September 22",
+        "element": "Earth",
+        "traits": ["Analytical", "Hardworking", "Practical"],
+        "lucky_numbers": [5, 14, 23],
+        "lucky_colors": ["Navy", "Grey"],
+        "symbol": "Virgin"
+    },
+    "Libra": {
+        "dates": "September 23 - October 22",
+        "element": "Air",
+        "traits": ["Diplomatic", "Gracious", "Fair-minded"],
+        "lucky_numbers": [6, 15, 24],
+        "lucky_colors": ["Pink", "Blue"],
+        "symbol": "Scales"
+    },
+    "Scorpio": {
+        "dates": "October 23 - November 21",
+        "element": "Water",
+        "traits": ["Passionate", "Determined", "Dynamic"],
+        "lucky_numbers": [8, 11, 18],
+        "lucky_colors": ["Black", "Red"],
+        "symbol": "Scorpion"
+    },
+    "Sagittarius": {
+        "dates": "November 22 - December 21",
+        "element": "Fire",
+        "traits": ["Optimistic", "Adventurous", "Honest"],
+        "lucky_numbers": [3, 7, 9],
+        "lucky_colors": ["Purple", "Blue"],
+        "symbol": "Archer"
+    },
+    "Capricorn": {
+        "dates": "December 22 - January 19",
+        "element": "Earth",
+        "traits": ["Responsible", "Disciplined", "Self-controlled"],
+        "lucky_numbers": [4, 8, 13],
+        "lucky_colors": ["Brown", "Grey"],
+        "symbol": "Goat"
+    },
+    "Aquarius": {
+        "dates": "January 20 - February 18",
+        "element": "Air",
+        "traits": ["Progressive", "Original", "Independent"],
+        "lucky_numbers": [4, 7, 11],
+        "lucky_colors": ["Blue", "Turquoise"],
+        "symbol": "Water Bearer"
+    },
+    "Pisces": {
+        "dates": "February 19 - March 20",
+        "element": "Water",
+        "traits": ["Artistic", "Intuitive", "Gentle"],
+        "lucky_numbers": [3, 9, 12],
+        "lucky_colors": ["Sea Green", "Lavender"],
+        "symbol": "Fish"
+    }
+}
