@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Zodiac Signs{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4">Zodiac Sign Details</h2>
+
+<div class="row" id="zodiacCards">
+    {% for sign, data in zodiac_data.items() %}
+    <div class="col-md-4 mb-4">
+        <div class="card zodiac-card">
+            <div class="card-body">
+                <h3 class="card-title">{{ sign }}</h3>
+                <div class="zodiac-symbol">
+                    <i class="fas fa-star"></i> {{ data.symbol }}
+                </div>
+                <p class="dates">{{ data.dates }}</p>
+                <div class="details">
+                    <p><strong>Element:</strong> {{ data.element }}</p>
+                    <p><strong>Traits:</strong></p>
+                    <ul>
+                        {% for trait in data.traits %}
+                        <li>{{ trait }}</li>
+                        {% endfor %}
+                    </ul>
+                    <p><strong>Lucky Numbers:</strong> {{ data.lucky_numbers|join(', ') }}</p>
+                    <p><strong>Lucky Colors:</strong> {{ data.lucky_colors|join(', ') }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
