@@ -1,34 +1,54 @@
 {% extends "base.html" %}
 
-{% block title %}Zodiac Signs{% endblock %}
+{% block title %}Daily Horoscope{% endblock %}
 
 {% block content %}
-<h2 class="text-center mb-4">Zodiac Sign Details</h2>
+<div class="horoscope-section">
+    <h2 class="text-center mb-4">Daily Horoscope</h2>
+    
+    <div class="zodiac-selector mb-4">
+        <label for="zodiacSelect" class="form-label">Select your zodiac sign:</label>
+        <select class="form-select" id="zodiacSelect">
+            <option value="">Choose your sign...</option>
+            {% for sign in horoscopes.keys() %}
+            <option value="{{ sign }}">{{ sign }}</option>
+            {% endfor %}
+        </select>
+    </div>
 
-<div class="row" id="zodiacCards">
-    {% for sign, data in zodiac_data.items() %}
-    <div class="col-md-4 mb-4">
-        <div class="card zodiac-card">
+    <div class="horoscope-display" id="horoscopeDisplay" style="display: none;">
+        <div class="card">
             <div class="card-body">
-                <h3 class="card-title">{{ sign }}</h3>
-                <div class="zodiac-symbol">
-                    <i class="fas fa-star"></i> {{ data.symbol }}
-                </div>
-                <p class="dates">{{ data.dates }}</p>
-                <div class="details">
-                    <p><strong>Element:</strong> {{ data.element }}</p>
-                    <p><strong>Traits:</strong></p>
-                    <ul>
-                        {% for trait in data.traits %}
-                        <li>{{ trait }}</li>
-                        {% endfor %}
-                    </ul>
-                    <p><strong>Lucky Numbers:</strong> {{ data.lucky_numbers|join(', ') }}</p>
-                    <p><strong>Lucky Colors:</strong> {{ data.lucky_colors|join(', ') }}</p>
-                </div>
+                <h3 class="card-title" id="selectedSign"></h3>
+                <p class="card-text" id="horoscopeText"></p>
+                <button class="btn btn-primary" onclick="refreshHoroscope()">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
             </div>
         </div>
     </div>
-    {% endfor %}
 </div>
+
+<script>
+document.getElementById('zodiacSelect').addEventListener('change', function() {
+    const sign = this.value;
+    if (sign) {
+        const horoscope = {{ horoscopes|tojson }};
+        document.getElementById('selectedSign').textContent = sign;
+        document.getElementById('horoscopeText').textContent = horoscope[sign];
+        document.getElementById('horoscopeDisplay').style.display = 'block';
+    } else {
+        document.getElementById('horoscopeDisplay').style.display = 'none';
+    }
+});
+
+function refreshHoroscope() {
+    // Simulate refresh with animation
+    const refreshBtn = document.querySelector('.fa-sync-alt');
+    refreshBtn.classList.add('fa-spin');
+    setTimeout(() => {
+        refreshBtn.classList.remove('fa-spin');
+    }, 1000);
+}
+</script>
 {% endblock %}

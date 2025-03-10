@@ -1,0 +1,161 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #8e44ad;
+    --accent-color: #f1c40f;
+    --text-light: #ecf0f1;
+    --text-dark: #2c3e50;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: var(--text-light);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--accent-color) !important;
+}
+
+.nav-link {
+    color: var(--text-light) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.hero-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #9b59b6;
+    border-color: #9b59b6;
+}
+
+.zodiac-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-light);
+    transition: transform 0.3s ease;
+}
+
+.zodiac-card:hover {
+    transform: translateY(-5px);
+}
+
+.zodiac-symbol {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin: 1rem 0;
+}
+
+.progress {
+    height: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar {
+    background-color: var(--secondary-color);
+    transition: width 1s ease-in-out;
+}
+
+.life-path-number {
+    font-size: 4rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.daily-tip {
+    background-color: rgba(142, 68, 173, 0.2);
+    border: 1px solid var(--secondary-color);
+    color: var(--text-light);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    backdrop-filter: blur(10px);
+}
+
+.form-control, .form-select {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--secondary-color);
+    color: var(--text-light);
+    box-shadow: 0 0 0 0.25rem rgba(142, 68, 173, 0.25);
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.daily-tip, .feature-card, .zodiac-card {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem 0;
+    }
+    
+    .feature-card {
+        margin-bottom: 1rem;
+    }
+    
+    .zodiac-card {
+        margin-bottom: 1rem;
+    }
+}
