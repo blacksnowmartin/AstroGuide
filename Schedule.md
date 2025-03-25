@@ -1,4 +1,3 @@
-If **Day 1** is **March 26, 2025**, here’s the 20-day schedule with the corresponding dates:  
 
 ### **Project Timeline (20 Days)**
 | **Day**  | **Date**           | **Task** |
