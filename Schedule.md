@@ -23,3 +23,30 @@
 | **Day 19** | April 13, 2025  | Review & Feedback |
 | **Day 20** | April 14, 2025  | Final Review & Launch |
 
+
+**Day 1-2**: Planning and Research
+- Define project scope and objectives.
+- Research best practices and technologies.
+
+**Day 3-5**: Design Phase
+- Create wireframes or mockups.
+- Plan user experience and interface.
+
+**Day 6-10**: Development Phase 1
+- Set up development environment.
+- Start coding basic functionalities.
+
+**Day 11-15**: Development Phase 2
+- Continue coding and integrate more features.
+- Conduct regular testing and debugging.
+
+**Day 16-18**: Finalizing
+- Refine UI/UX.
+- Perform comprehensive testing and fix any issues.
+
+**Day 19-20**: Review and Launch
+- Review the project and gather feedback.
+- Prepare for launch and deploy the MVP.
+
+## Sticking to win!
+
