@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroGuide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#daily-horoscope">Daily Horoscope</a></li>
+                <li><a href="#zodiac-sign-details">Zodiac Sign Details</a></li>
+                <li><a href="#compatibility-check">Compatibility Check</a></li>
+                <li><a href="#numerology-insights">Numerology Insights</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to AstroGuide</h1>
+            <p>Discover your daily horoscope, zodiac sign details, compatibility, and numerology insights.</p>
+            <button id="login-btn">Log in/Sign up</button>
+        </section>
+        <section id="daily-horoscope">
+            <h2>Daily Horoscope</h2>
+            <select id="zodiac-sign-select">
+                <option value="Aries">Aries</option>
+                <option value="Taurus">Taurus</option>
+                <option value="Gemini">Gemini</option>
+                <option value="Cancer">Cancer</option>
+                <option value="Leo">Leo</option>
+                <option value="Virgo">Virgo</option>
+                <option value="Libra">Libra</option>
+                <option value="Scorpio">Scorpio</option>
+                <option value="Sagittarius">Sagittarius</option>
+                <option value="Capricorn">Capricorn</option>
+                <option value="Aquarius">Aquarius</option>
+                <option value="Pisces">Pisces</option>
+            </select>
+            <button id="refresh-horoscope-btn">Refresh</button>
+            <p id="horoscope-text"></p>
+        </section>
+        <section id="zodiac-sign-details">
+            <h2>Zodiac Sign Details</h2>
+            <div class="zodiac-signs-container">
+                <div class="zodiac-sign">
+                    <h3>Aries</h3>
+                    <p>Dates: March 21 - April 19</p>
+                    <p>Personality traits: Adventurous, confident, determined</p>
+                    <p>Lucky numbers: 1, 9</p>
+                    <p>Lucky colors: Red, orange</p>
+                    <p>Compatibility: Leo, Sagittarius</p>
+                </div>
+                <div class="zodiac-sign">
+                    <h3>Taurus</h3>
+                    <p>Dates: April 20 - May 20</p>
+                    <p>Personality traits: Reliable, practical, sensuous</p>
+                    <p>Lucky numbers: 2, 6</p>
+                    <p>Lucky colors: Green, blue</p>
+                    <p>Compatibility: Virgo, Capricorn</p>
+                </div>
+                <!-- Add more zodiac signs here -->
+            </div>
+        </section>
+        <section id="compatibility-check">
+            <h2>Compatibility Check</h2>
+            <form id="compatibility-form">
+                <label for="user-zodiac-sign">Your zodiac sign:</label>
+                <select id="user-zodiac-sign">
+                    <option value="Aries">Aries</option>
+                    <option value="Taurus">Taurus</option>
+                    <option value="Gemini">Gemini</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Scorpio">Scorpio</option>
+                    <option value="Sagittarius">Sagittarius</option>
+                    <option value="Capricorn">Capricorn</option>
+                    <option value="Aquarius">Aquarius</option>
+                    <option value="Pisces">Pisces</option>
+                </select>
+                <label for="partner-zodiac-sign">Partner's zodiac sign:</label>
+                <select id="partner-zodiac-sign">
+                    <option value="Aries">Aries</option>
+                    <option value="Taurus">Taurus</option>
+                    <option value="Gemini">Gemini</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Scorpio">Scorpio</option>
+                    <option value="Sagittarius">Sagittarius</option>
+                    <option value="Capricorn">Capricorn</option>
+                    <option value="Aquarius">Aquarius</option>
+                    <option value="Pisces">Pisces</option>
+                </select>
+                <button id="check-compatibility-btn">Check Compatibility</button>
+            </form>
+            <p id="compatibility-result"></p>
+        </section>
+        <section id="numerology-insights">
+            <h2>Numerology Insights</h2>
+            <form id="numerology-form">
+                <label for="birthdate">Birthdate (DD/MM/YYYY):</label>
+                <input type="text" id="birthdate" />
+                <button id="calculate-numerology-btn">Calculate Numerology</button>
+            </form>
+            <p id="numerology-result"></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
