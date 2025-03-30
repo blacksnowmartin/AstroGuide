@@ -4,32 +4,42 @@ const refreshHoroscopeBtn = document.getElementById('refresh-horoscope-btn');
 const horoscopeText = document.getElementById('horoscope-text');
 
 const horoscopes = {
-    Aries: 'You will have a great day today!',
-    Taurus: 'Be careful with your finances today.',
-    Gemini: 'You will meet someone new today.',
-    Cancer: 'Take care of your health today.',
-    Leo: 'You will have a successful day today.',
-    Virgo: 'Be organized and focused today.',
-    Libra: 'You will have a balanced day today.',
-    Scorpio: 'Be careful with your emotions today.',
-    Sagittarius: 'You will have a adventurous day today.',
-    Capricorn: 'You will have a productive day today.',
-    Aquarius: 'You will have a innovative day today.',
-    Pisces: 'You will have a creative day today.'
+    Aries: 'You will have a great day today! Your energy and enthusiasm will open new doors.',
+    Taurus: 'Be careful with your finances today. Take time to plan your budget carefully.',
+    Gemini: 'You will meet someone new today who could become an important part of your life.',
+    Cancer: 'Take care of your health today. Make time for self-care and emotional wellbeing.',
+    Leo: 'You will have a successful day today! Your confidence will help you achieve your goals.',
+    Virgo: 'Be organized and focused today. Your attention to detail will pay off.',
+    Libra: 'You will have a balanced day today. Harmony in relationships brings peace.',
+    Scorpio: 'Be careful with your emotions today. Channel your intensity into creative pursuits.',
+    Sagittarius: 'You will have an adventurous day today! Embrace new opportunities for growth.',
+    Capricorn: 'You will have a productive day today. Your disciplined approach brings success.',
+    Aquarius: 'You will have an innovative day today! Your unique ideas will be appreciated.',
+    Pisces: 'You will have a creative day today. Your imagination will help solve problems.'
 };
 
 zodiacSignSelect.addEventListener('change', () => {
-    const selectedSign = zodiacSignSelect.value;
-    horoscopeText.textContent = horoscopes[selectedSign];
+    if (zodiacSignSelect.value) {
+        const selectedSign = zodiacSignSelect.value;
+        horoscopeText.textContent = horoscopes[selectedSign];
+        horoscopeText.classList.add('result-fade-in');
+    } else {
+        horoscopeText.textContent = '';
+    }
 });
 
 refreshHoroscopeBtn.addEventListener('click', () => {
-    const selectedSign = zodiacSignSelect.value;
-    horoscopeText.textContent = horoscopes[selectedSign];
+    if (zodiacSignSelect.value) {
+        const selectedSign = zodiacSignSelect.value;
+        horoscopeText.textContent = horoscopes[selectedSign];
+        horoscopeText.classList.add('result-fade-in');
+    } else {
+        alert('Please select a zodiac sign first');
+    }
 });
 
 // Zodiac Sign Details
-const zodiacSignsContainer = document.querySelector('.zodiac-signs-container');
+const zodiacSignsContainer = document.getElementById('zodiac-signs-container');
 
 // Compatibility Check
 const userZodiacSignSelect = document.getElementById('user-zodiac-sign');
@@ -65,23 +75,70 @@ const calculateNumerologyBtn = document.getElementById('calculate-numerology-btn
 const numerologyResult = document.getElementById('numerology-result');
 
 const numerologyChart = {
-    1: 'You are a leader and a pioneer.',
-    2: 'You are a peacemaker and a diplomat.',
-    3: 'You are a creative and a communicator.',
-    4: 'You are a hard worker and a practical person.',
-    5: 'You are a free spirit and an adventurer.',
-    6: 'You are a responsible and a caring person.',
-    7: 'You are a thinker and a philosopher.',
-    8: 'You are a successful and a confident person.',
-    9: 'You are a humanitarian and a visionary.'
+    1: 'You are a natural leader and pioneer. Independent and determined, you chart your own path in life.',
+    2: 'You are a peacemaker and diplomat. Your sensitivity and intuition help you understand others deeply.',
+    3: 'You are creative and expressive. Communication comes naturally to you, and you inspire others.',
+    4: 'You are a hard worker with practical skills. Reliable and organized, you build solid foundations.',
+    5: 'You are a free spirit and adventurer. Your adaptability and curiosity lead to exciting experiences.',
+    6: 'You are responsible and caring. Your nurturing nature makes you an excellent caretaker and friend.',
+    7: 'You are a thinker and philosopher. Your analytical mind seeks knowledge and spiritual understanding.',
+    8: 'You are ambitious and confident. Your practical approach to challenges leads to material success.',
+    9: 'You are humanitarian and visionary. Your compassion extends to all, making you a natural healer.'
 };
 
 calculateNumerologyBtn.addEventListener('click', () => {
     const birthdate = birthdateInput.value;
-    const day = parseInt(birthdate.split('/')[0]);
-    const month = parseInt(birthdate.split('/')[1]);
-    const year = parseInt(birthdate.split('/')[2]);
-    const lifePathNumber = (day + month + year).toString().split('').reduce((a, b) => parseInt(a) + parseInt(b));
-    const numerology = numerologyChart[lifePathNumber % 9];
-    numerologyResult.textContent = numerology;
+    
+    // Validate date format (DD/MM/YYYY)
+    const datePattern = /^\d{2}\/\d{2}\/\d{4}$/;
+    if (!datePattern.test(birthdate)) {
+        alert('Please enter the birthdate in DD/MM/YYYY format');
+        return;
+    }
+    
+    try {
+        const parts = birthdate.split('/');
+        const day = parseInt(parts[0]);
+        const month = parseInt(parts[1]);
+        const year = parseInt(parts[2]);
+        
+        // Basic date validation
+        if (day < 1 || day > 31 || month < 1 || month > 12 || year < 1900 || year > 2100) {
+            alert('Please enter a valid date');
+            return;
+        }
+        
+        // Calculate life path number correctly using numerology principles
+        // Add all digits together until a single digit is obtained
+        const calculateSingleDigit = (num) => {
+            if (num <= 9) return num;
+            return calculateSingleDigit(num.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0));
+        };
+        
+        const dayNumber = calculateSingleDigit(day);
+        const monthNumber = calculateSingleDigit(month);
+        const yearNumber = calculateSingleDigit(year);
+        
+        let lifePathNumber = calculateSingleDigit(dayNumber + monthNumber + yearNumber);
+        
+        // In numerology, 11 and 22 are master numbers (don't reduce)
+        if (lifePathNumber === 0) lifePathNumber = 9; // In numerology, 9 is used instead of 0
+        
+        const numerology = numerologyChart[lifePathNumber];
+        numerologyResult.innerHTML = `<strong>Your Life Path Number is ${lifePathNumber}:</strong> ${numerology}`;
+        numerologyResult.classList.add('result-fade-in');
+        
+    } catch (error) {
+        alert('Error calculating numerology. Please check your date format.');
+        console.error(error);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ---- Login Button (placeholder functionality) ----
+    const loginBtn = document.getElementById('login-btn');
+    
+    loginBtn.addEventListener('click', () => {
+        alert('Login functionality would be implemented here. This is just a demo.');
+    });
 });
