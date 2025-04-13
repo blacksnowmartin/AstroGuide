@@ -49,4 +49,11 @@
 | **Day 20** | April 14, 2025  | Final Review & Launch |
 
 Create the Web3 UI using another account of v0.dev. 
+
+Set up Kali environment. 
+
+Write smart contract consider using third Web libraries. 
+
+Check the right videos on how to do that. 
+
 # 🚀🚀🚀🚀🚀🚀🚀🚀
