@@ -1,4 +1,4 @@
-
+90
 **Day 1-2**: Planning and Research
 - Define project scope and objectives.
 - Research best practices and technologies.
@@ -48,4 +48,5 @@
 | **Day 19** | April 13, 2025  | Review & Feedback |
 | **Day 20** | April 14, 2025  | Final Review & Launch |
 
+Create the Web3 UI using another account of v0.dev. 
 # 🚀🚀🚀🚀🚀🚀🚀🚀
