@@ -48,4 +48,13 @@
 | **Day 19** | April 13, 2025  | Review & Feedback |
 | **Day 20** | April 14, 2025  | Final Review & Launch |
 
+Create the Web3 UI using another account of v0.dev. 
+
+Set up Kali environment. 
+
+Write smart contract consider using third Web libraries. 
+
+How to add pages to the react project without drifting away from the user interface landing page look. 
+Check the right videos on how to do that. 
+
 # 🚀🚀🚀🚀🚀🚀🚀🚀
