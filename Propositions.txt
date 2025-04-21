@@ -1,3 +1,5 @@
 Add a section to support the astrologers and also add a section for NFT Market place for the various horoscopes
 Formulate how to add the birthday analyzers for the 365 days.
 Find who is good at connecting wallets.
+https://github.com/11coder/AstroGuide/tree/master
+Take note of the repositories named Astroguide. 
