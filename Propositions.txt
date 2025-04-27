@@ -5,3 +5,4 @@ https://github.com/11coder/AstroGuide/tree/master
 Take note of the repositories named Astroguide.
 Plan how to present it in codeafrica conference. 
 Check the code from 11 coder and see the segments that can be edited.
+
