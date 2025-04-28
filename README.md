@@ -58,4 +58,6 @@ How to add pages to the react project without drifting away from the user interf
 Check the right videos on how to do that. 
 
 pip install google-generativeai
+
+pip install -r requirements.txt
 # 🚀🚀🚀🚀🚀🚀🚀🚀

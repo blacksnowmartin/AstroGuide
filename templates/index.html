@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="astro-form">
+    <h1>Welcome to Astroguide</h1>
+    <p>Get personalized astrology readings powered by AI</p>
+    
+    <form id="readingForm">
+        <div class="form-group">
+            <label for="sign">Your Zodiac Sign:</label>
+            <select id="sign" name="sign" required>
+                <option value="">Select your sign</option>
+                <option value="Aries">Aries</option>
+                <option value="Taurus">Taurus</option>
+                <option value="Gemini">Gemini</option>
+                <option value="Cancer">Cancer</option>
+                <option value="Leo">Leo</option>
+                <option value="Virgo">Virgo</option>
+                <option value="Libra">Libra</option>
+                <option value="Scorpio">Scorpio</option>
+                <option value="Sagittarius">Sagittarius</option>
+                <option value="Capricorn">Capricorn</option>
+                <option value="Aquarius">Aquarius</option>
+                <option value="Pisces">Pisces</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="question">Your Question:</label>
+            <textarea id="question" name="question" required 
+                placeholder="What would you like to know about your future?"></textarea>
+        </div>
+        
+        <button type="submit">Get Reading</button>
+    </form>
+    
+    <div id="readingResult" class="reading-result" style="display: none;">
+        <h2>Your Reading</h2>
+        <div id="readingText"></div>
+    </div>
+</div>
+{% endblock %} 
