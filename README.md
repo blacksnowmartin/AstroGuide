@@ -57,4 +57,5 @@ Write smart contract consider using third Web libraries.
 How to add pages to the react project without drifting away from the user interface landing page look. 
 Check the right videos on how to do that. 
 
+pip install google-generativeai
 # 🚀🚀🚀🚀🚀🚀🚀🚀
