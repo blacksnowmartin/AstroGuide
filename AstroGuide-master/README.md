@@ -4,3 +4,5 @@ Astrology Website!
 
 About Developer
 I am Blacksnow Martin, a self-discovery enthusiast.
+
+2025 ©
