@@ -7,6 +7,9 @@ import DailyHoroscope from "@/components/DailyHoroscope";
 import ZodiacSigns from "@/components/ZodiacSigns";
 import Compatibility from "@/components/Compatibility";
 import Numerology from "@/components/Numerology";
+import TarotReading from "@/components/TarotReading";
+import MoonPhase from "@/components/MoonPhase";
+import ChineseZodiac from "@/components/ChineseZodiac";
 import { motion, AnimatePresence } from "framer-motion";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -95,6 +98,45 @@ function App() {
                   transition={{ duration: 0.3 }}
                 >
                   <Numerology />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/tarot"
+              element={
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <TarotReading />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/moon-phase"
+              element={
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <MoonPhase />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/chinese-zodiac"
+              element={
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ChineseZodiac />
                 </motion.div>
               }
             />

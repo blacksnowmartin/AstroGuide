@@ -81,6 +81,51 @@ function Home() {
             <Button>Calculate Now</Button>
           </Link>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="zodiac-card"
+        >
+          <h3 className="text-xl font-semibold mb-3">Tarot Reading</h3>
+          <p className="text-muted-foreground mb-4">
+            Receive guidance and insight from the ancient wisdom of tarot cards.
+          </p>
+          <Link to="/tarot">
+            <Button>Draw Cards</Button>
+          </Link>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="zodiac-card"
+        >
+          <h3 className="text-xl font-semibold mb-3">Moon Phase</h3>
+          <p className="text-muted-foreground mb-4">
+            Discover the current moon phase and its spiritual significance.
+          </p>
+          <Link to="/moon-phase">
+            <Button>Check Moon</Button>
+          </Link>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+          className="zodiac-card"
+        >
+          <h3 className="text-xl font-semibold mb-3">Chinese Zodiac</h3>
+          <p className="text-muted-foreground mb-4">
+            Discover your Chinese zodiac sign and learn about its characteristics.
+          </p>
+          <Link to="/chinese-zodiac">
+            <Button>Find Your Sign</Button>
+          </Link>
+        </motion.div>
       </div>
 
       <motion.div

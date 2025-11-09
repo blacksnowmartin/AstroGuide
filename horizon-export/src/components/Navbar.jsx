@@ -22,6 +22,9 @@ function Navbar() {
     { path: "/zodiac-signs", label: "Zodiac Signs" },
     { path: "/compatibility", label: "Compatibility" },
     { path: "/numerology", label: "Numerology" },
+    { path: "/tarot", label: "Tarot" },
+    { path: "/moon-phase", label: "Moon Phase" },
+    { path: "/chinese-zodiac", label: "Chinese Zodiac" },
   ];
 
   return (

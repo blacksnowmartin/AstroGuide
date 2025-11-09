@@ -2,40 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-const zodiacSigns = [
-  {
-    name: "Aries",
-    dates: "March 21 - April 19",
-    element: "Fire",
-    traits: ["Confident", "Courageous", "Enthusiastic"],
-    luckyNumbers: [1, 9, 17],
-    luckyColors: ["Red", "Orange"],
-    description:
-      "Aries is a natural born leader, always ready to blaze a trail and take on challenges head-first.",
-  },
-  {
-    name: "Taurus",
-    dates: "April 20 - May 20",
-    element: "Earth",
-    traits: ["Patient", "Reliable", "Determined"],
-    luckyNumbers: [2, 6, 15],
-    luckyColors: ["Green", "Pink"],
-    description:
-      "Taurus is known for being reliable, practical, and devoted, with a strong appreciation for beauty and comfort.",
-  },
-  {
-    name: "Gemini",
-    dates: "May 21 - June 20",
-    element: "Air",
-    traits: ["Adaptable", "Outgoing", "Intelligent"],
-    luckyNumbers: [3, 12, 21],
-    luckyColors: ["Yellow", "Blue"],
-    description:
-      "Gemini is versatile, expressive, and quick-witted, with a natural curiosity about life and others.",
-  },
-  // Add more zodiac signs...
-];
+import { zodiacSigns } from "@/lib/zodiacData";
 
 function ZodiacSigns() {
   return (
@@ -81,10 +48,38 @@ function ZodiacSigns() {
                     <p className="text-muted-foreground">{sign.element}</p>
                   </div>
                   <div>
+                    <h3 className="font-semibold mb-2">Quality</h3>
+                    <p className="text-muted-foreground">{sign.quality}</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Ruling Planet</h3>
+                    <p className="text-muted-foreground">{sign.rulingPlanet}</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Symbol</h3>
+                    <p className="text-muted-foreground">{sign.symbol}</p>
+                  </div>
+                  <div>
                     <h3 className="font-semibold mb-2">Key Traits</h3>
                     <ul className="list-disc list-inside text-muted-foreground">
                       {sign.traits.map((trait) => (
                         <li key={trait}>{trait}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Strengths</h3>
+                    <ul className="list-disc list-inside text-muted-foreground">
+                      {sign.strengths.map((strength) => (
+                        <li key={strength}>{strength}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Weaknesses</h3>
+                    <ul className="list-disc list-inside text-muted-foreground">
+                      {sign.weaknesses.map((weakness) => (
+                        <li key={weakness}>{weakness}</li>
                       ))}
                     </ul>
                   </div>
@@ -94,18 +89,40 @@ function ZodiacSigns() {
               <div className="zodiac-card">
                 <h3 className="font-semibold mb-4">About {sign.name}</h3>
                 <p className="text-muted-foreground mb-6">{sign.description}</p>
-                <div className="space-y-4">
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-semibold mb-2">Love & Relationships</h4>
+                    <p className="text-muted-foreground text-sm">{sign.loveDescription}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Career</h4>
+                    <p className="text-muted-foreground text-sm">{sign.careerDescription}</p>
+                  </div>
                   <div>
                     <h4 className="font-semibold mb-2">Lucky Numbers</h4>
-                    <p className="text-muted-foreground">
-                      {sign.luckyNumbers.join(", ")}
-                    </p>
+                    <div className="flex gap-2 flex-wrap">
+                      {sign.luckyNumbers.map((num) => (
+                        <span key={num} className="px-3 py-1 bg-primary/10 rounded-full text-sm">
+                          {num}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2">Lucky Colors</h4>
                     <p className="text-muted-foreground">
                       {sign.luckyColors.join(", ")}
                     </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Most Compatible With</h4>
+                    <div className="flex gap-2 flex-wrap">
+                      {sign.compatibleSigns.map((compSign) => (
+                        <span key={compSign} className="px-3 py-1 bg-accent rounded-full text-sm">
+                          {compSign}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
